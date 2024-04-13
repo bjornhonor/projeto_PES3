@@ -1,0 +1,83 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.calculator-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-container {
+  flex: 1;
+  margin: 10px;
+  min-width: 120px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* makes padding included in width */
+}
+
+button.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.calculate {
+  background-color: #8A2BE2;
+  color: white;
+}
+
+.calculate:hover {
+  background-color: #7b1fa2;
+}
+
+.clear {
+  background-color: #ccc;
+  color: white;
+}
+
+.clear:hover {
+  background-color: #b0bec5;
+}
+
+.button-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .input-container, .button-container {
+    flex-basis: 100%;
+  }
+}
