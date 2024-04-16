@@ -22,13 +22,16 @@ h1 {
 .form-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .input-container {
   flex: 1;
   margin: 10px;
-  min-width: 120px;
+  min-width: 200px;
+  max-width: 400px;
 }
 
 input[type="text"],
@@ -39,16 +42,19 @@ select {
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* makes padding included in width */
+  box-sizing: border-box;
 }
 
 button.btn {
+  flex: 1; /* Faz com que os botões expandam igualmente dentro do container */
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s ease;
+  margin: 5px; /* Assegura espaço entre os botões */
+  min-width: 120px; /* Garante um mínimo de largura */
 }
 
 .calculate {
@@ -75,9 +81,72 @@ button.btn {
   justify-content: space-around;
 }
 
-/* Adjustments for smaller screens */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+}
+
+.modal-content h2,
+.modal-content p {
+  font-size: 18px; /* Aumentado de um tamanho padrão para 18px */
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+  }
   .input-container, .button-container {
     flex-basis: 100%;
   }
+  .modal-content {
+    width: 80%; /* Para melhor visualização em dispositivos móveis */
+  }
 }
+
+.valor-bruto {
+  color: #0000cc; /* Um azul escuro */
+}
+
+.valor-liquido {
+  color: #008000; /* Um verde escuro */
+}
+
+.valor-impostos {
+  color: #cc0000; /* Um vermelho escuro */
+}
+

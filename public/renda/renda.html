@@ -32,7 +32,7 @@
 
       <div class="input-container">
         <label for="profitability">Rentabilidade</label>
-        <input type="text" id="profitability" placeholder="% 0,00">
+        <input type="text" id="profitability" placeholder="0,00 %">
         <select id="profitability-period">
           <option>Anual</option>
           <option>Mensal</option>
@@ -46,6 +46,16 @@
     </form>
   </div>
 </div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2>Resultados</h2>
+    <p id="valorBruto" class="valor-bruto">Valor Bruto: R$0,25</p>
+    <p id="valorLiquido" class="valor-liquido">Valor Líquido: R$0,05</p>
+    <p id="impostos" class="valor-impostos">Impostos: R$0,64</p>
+    <button class="btn close-btn">Fechar</button>
+  </div>
+</div>
 <script src="/funcoes/a.js"></script>
+<script src="/funcoes/logica.js"></script>
 </body>
 </html>
