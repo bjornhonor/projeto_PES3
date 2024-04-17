@@ -46,33 +46,33 @@ select {
 }
 
 button.btn {
-  flex: 1; /* Faz com que os botões expandam igualmente dentro do container */
+  flex: 1;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   transition: background 0.3s ease;
-  margin: 5px; /* Assegura espaço entre os botões */
-  min-width: 120px; /* Garante um mínimo de largura */
+  margin: 5px;
+  min-width: 120px;
 }
 
 .calculate {
-  background-color: #8A2BE2;
+  background-color: #4CAF50;
   color: white;
 }
 
 .calculate:hover {
-  background-color: #7b1fa2;
+  background-color: #45a049;
 }
 
 .clear {
-  background-color: #ccc;
+  background-color: #f44336;
   color: white;
 }
 
 .clear:hover {
-  background-color: #b0bec5;
+  background-color: #d32f2f;
 }
 
 .button-container {
@@ -94,25 +94,55 @@ button.btn {
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
+  background-color: #fff;
+  margin: 15% auto; /* Centraliza o modal verticalmente e horizontalmente */
   padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
+  border: 1px solid #ccc;
+  width: 60%; /* Reduzido de 80% para 60% */
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-  border-radius: 10px; /* Adiciona bordas arredondadas */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.modal-content h2,
-.modal-content p {
-  font-size: 18px; /* Aumentado de um tamanho padrão para 18px */
+
+.results-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.primary-info, .additional-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.primary-info {
+  align-items: flex-start;
+}
+
+.additional-info {
+  align-items: flex-end;
+}
+
+h2 {
+  text-align: center;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .close-btn {
   color: #aaa;
-  float: right;
   font-size: 28px;
   font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 .close-btn:hover,
@@ -122,31 +152,26 @@ button.btn {
   cursor: pointer;
 }
 
-h2 {
-  text-align: center;
-}
-
 @media (max-width: 768px) {
-  .form-container {
+  .modal-content {
+    width: 90%;
     flex-direction: column;
   }
-  .input-container, .button-container {
-    flex-basis: 100%;
-  }
-  .modal-content {
-    width: 80%; /* Para melhor visualização em dispositivos móveis */
+
+  .primary-info, .additional-info {
+    width: 100%;
+    align-items: center;
   }
 }
 
 .valor-bruto {
-  color: #0000cc; /* Um azul escuro */
+  color: #0000cc;
 }
 
 .valor-liquido {
-  color: #008000; /* Um verde escuro */
+  color: #008000;
 }
 
 .valor-impostos {
-  color: #cc0000; /* Um vermelho escuro */
+  color: #cc0000;
 }
-

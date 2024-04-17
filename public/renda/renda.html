@@ -49,11 +49,23 @@
 <div id="modal" class="modal">
   <div class="modal-content">
     <h2>Resultados</h2>
-    <p id="valorBruto" class="valor-bruto">Valor Bruto: R$0,25</p>
-    <p id="valorLiquido" class="valor-liquido">Valor Líquido: R$0,05</p>
-    <p id="impostos" class="valor-impostos">Impostos: R$0,64</p>
+    <div class="results-container">
+      <div class="primary-info">
+        <p id="valorBruto" class="valor-bruto">Valor Bruto: R$0,25</p>
+        <p id="impostos" class="valor-impostos">Impostos: R$0,64</p>
+        <p id="valorLiquido" class="valor-liquido">Valor Líquido: R$0,05</p>
+      </div>
+      <div class="additional-info">
+        <p id="valorTotalInvestido" class="valor-total-investido">Valor Total Investido: R$0,00</p>
+        <p id="valorEmJuros" class="valor-em-juros">Valor em Juros: R$0,00</p>
+        <p id="taxaImposto" class="taxa-imposto">Taxa de Imposto: 15%</p>
+      </div>
+    </div>
     <button class="btn close-btn">Fechar</button>
   </div>
+</div>
+
+
 </div>
 <script src="/funcoes/a.js"></script>
 <script src="/funcoes/logica.js"></script>
